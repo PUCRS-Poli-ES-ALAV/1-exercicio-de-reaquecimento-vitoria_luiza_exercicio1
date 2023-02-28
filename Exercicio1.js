@@ -1,10 +1,11 @@
-console.log(somaSucessiva(6,4));
-
-function somaSucessiva(num1, num2) {
-    let resultado = 0;
-    for(let i=1; i<=num1; i++) {
-        resultado+=num2;
+function somaSucessiva(a, b) {
+    if (b === 1) {
+      return a;
+    } else {
+      return a + somaSucessiva(a, b-1);
     }
-    return resultado;
 }
+
+console.log(somaSucessiva(6,4));
+  
 
